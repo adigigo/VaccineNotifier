@@ -28,9 +28,11 @@ Follow this link : https://www.codementor.io/@garethdwyer/building-a-telegram-bo
   Hope this helps! Stay Safe everyone!
 
 Telegram Screenshot
+
 ![WhatsApp Image 2021-05-03 at 3 54 48 PM](https://user-images.githubusercontent.com/43105718/116865929-2e46e700-ac28-11eb-9895-80482b2924b3.jpeg)
 
 
 Email Screenshot
+
 ![Capture](https://user-images.githubusercontent.com/43105718/116865968-3e5ec680-ac28-11eb-98dd-2ea6d1bdf984.PNG)
 
