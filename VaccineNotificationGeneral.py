@@ -34,13 +34,13 @@ def send_mail(appt):
 ## Specify Pincode before running
 pincode = '392110'
 
-today = date.today()
-date = today.strftime("%d-%m-%Y")   ##Gets todays Date
-
-## CoWIN API
-url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={pincode}&date={date}"
-
 def AppointmentCheck():
+
+    today = date.today()
+    currrent_date = today.strftime("%d-%m-%Y")   ##Gets todays Date
+
+    ## CoWIN API
+    url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={pincode}&date={current_date}"
 
     response = requests.get(url)
 
@@ -51,7 +51,7 @@ def AppointmentCheck():
         centers = data['centers']   #Gets all the vaccination centers and their corresponding details
         
         if len(centers) == 0:
-            print(f"No Appointments found in the next 7 days from {date}")
+            print(f"No Appointments found in the next 7 days from {current_date}")
         
         else:
             res = {}
