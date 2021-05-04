@@ -7,7 +7,7 @@
 import requests
 import json
 import smtplib
-from datetime import date
+from datetime import date,datetime
 import time
 import sys
 
@@ -39,6 +39,9 @@ def AppointmentCheck():
     today = date.today()
     currrent_date = today.strftime("%d-%m-%Y")   ##Gets todays Date
 
+    now = datetime.now()
+    current_time = now.strftime("%I:%M %p")  ##Gets Current time of checking
+
     ## CoWIN API
     url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={pincode}&date={current_date}"
 
@@ -51,7 +54,7 @@ def AppointmentCheck():
         centers = data['centers']   #Gets all the vaccination centers and their corresponding details
         
         if len(centers) == 0:
-            print(f"No Appointments found in the next 7 days from {current_date}")
+            print(f"No Appointments found in the next 7 days from {current_date} : Last Check at {current_time}")
         
         else:
             res = {}
