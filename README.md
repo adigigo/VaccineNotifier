@@ -1,5 +1,5 @@
 # VaccineNotifier
-A Python script to get data from the Aarogya Sethu API to find vaccine appointments for 7 days past a specific date in a specific pincode
+A Python script to get data from the CoWIN API to find vaccine appointments for 7 days past a specific date in a specific pincode
 
 The program uses the official CoWIN API which is publically available here : https://apisetu.gov.in/public/api/cowin#/
 
