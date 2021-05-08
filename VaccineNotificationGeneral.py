@@ -37,7 +37,7 @@ pincode = '392110'
 def AppointmentCheck():
 
     today = date.today()
-    currrent_date = today.strftime("%d-%m-%Y")   ##Gets todays Date
+    current_date = today.strftime("%d-%m-%Y")   ##Gets todays Date
 
     now = datetime.now()
     current_time = now.strftime("%I:%M %p")  ##Gets Current time of checking
