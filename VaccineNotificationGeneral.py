@@ -44,11 +44,13 @@ def AppointmentCheck():
 
     ## CoWIN API
     url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={pincode}&date={current_date}"
+    headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:85.0) Gecko/20100101 Firefox/85.0'}
 
-    response = requests.get(url)
+    response = requests.get(url,headers = headers)
 
     if response.status_code != 200:
         print ("Error!")
+        exit()
     else:
         data = response.json()
         centers = data['centers']   #Gets all the vaccination centers and their corresponding details
